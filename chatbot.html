@@ -1,0 +1,47 @@
+<!-- ============================================
+     CHATBOT WIDGET
+     ============================================ -->
+<div id="chatbot-container" class="chatbot-container">
+  <!-- Chat Toggle Button -->
+  <button id="chat-toggle" class="chat-toggle" aria-label="Open chat" title="Chat with AI Assistant">
+    <span class="chat-icon">💬</span>
+    <span class="chat-close" style="display: none;">✕</span>
+  </button>
+
+  <!-- Chat Window -->
+  <div id="chat-window" class="chat-window" style="display: none;">
+    <!-- Header -->
+    <div class="chat-header">
+      <h3>📚 MBUNGE AI Assistant</h3>
+      <button id="close-chat" class="close-btn">✕</button>
+    </div>
+
+    <!-- Messages Container -->
+    <div id="chat-messages" class="chat-messages">
+      <div class="chat-message bot-message">
+        <p>👋 Hello! I'm your MBUNGE AI Assistant. I can help you with:</p>
+        <ul>
+          <li>📖 Book recommendations</li>
+          <li>💡 Personal growth advice</li>
+          <li>💰 Financial tips</li>
+          <li>✨ Spiritual guidance</li>
+        </ul>
+        <p>How can I help you today?</p>
+      </div>
+    </div>
+
+    <!-- Input Area -->
+    <div class="chat-input-area">
+      <input 
+        type="text" 
+        id="chat-input" 
+        class="chat-input" 
+        placeholder="Ask me anything..." 
+        aria-label="Chat message input"
+      >
+      <button id="send-btn" class="send-btn" aria-label="Send message">
+        📤
+      </button>
+    </div>
+  </div>
+</div>
