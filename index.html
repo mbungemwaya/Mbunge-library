@@ -1,47 +1,133 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MBUNGE Online Library</title>
+  <title>MBUNGE Online Library - Transform Your Life Through Knowledge</title>
+  <meta name="description" content="Explore precious knowledge for personal growth, financial freedom, mindset development, and spiritual growth.">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="/EAGLE VISION TECHWAVE.png"
+  <link rel="icon" href="/EAGLE VISION TECHWAVE.png">
 </head>
 <body>
 
-<header>
-  MBUNGE ONLINE LIBRARY
+<!-- Header -->
+<header class="header">
+  <div class="header-content">
+    <h1 class="logo">📚 MBUNGE LIBRARY</h1>
+    <p class="tagline">Precious Knowledge for Your Growth</p>
+  </div>
 </header>
 
-<nav>
-  <a href="#">Home</a>
-  <a href="#">Categories</a>
-  <a href="#">About</a>
+<!-- Navigation -->
+<nav class="navbar">
+  <ul class="nav-list">
+    <li><a href="#home" class="nav-link">🏠 Home</a></li>
+    <li><a href="#categories" class="nav-link">📂 Categories</a></li>
+    <li><a href="#books" class="nav-link">📖 Books</a></li>
+    <li><a href="#about" class="nav-link">ℹ️ About</a></li>
+  </ul>
 </nav>
 
-<section class="hero">
-  <h1>Transform Your Life Through Knowledge</h1>
-  <p>Personal Finance | Mindset Growth | Kingdom of God</p>
-  <br>
-  <input type="text" id="search" placeholder="Search books...">
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1 class="hero-title">Transform Your Life Through Knowledge</h1>
+    <p class="hero-subtitle">Personal Finance | Mindset Growth | Kingdom of God</p>
+    
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input 
+        type="text" 
+        id="search" 
+        class="search-input" 
+        placeholder="🔍 Search books, topics, authors..."
+        aria-label="Search books"
+      >
+      <span class="search-icon">🔍</span>
+    </div>
+  </div>
 </section>
 
-<section class="categories">
-  <div class="card">Personal Finance</div>
-  <div class="card">Mindset Growth</div>
-  <div class="card">Kingdom of God</div>
+<!-- Categories Section -->
+<section class="categories" id="categories">
+  <h2 class="section-title">Popular Categories</h2>
+  <div class="categories-grid">
+    <div class="category-card" tabindex="0" role="button" aria-label="Personal Finance category">
+      <div class="card-icon">💰</div>
+      <h3>Personal Finance</h3>
+      <p>Build wealth and financial independence</p>
+    </div>
+    <div class="category-card" tabindex="0" role="button" aria-label="Mindset Growth category">
+      <div class="card-icon">🧠</div>
+      <h3>Mindset Growth</h3>
+      <p>Develop a winning mindset</p>
+    </div>
+    <div class="category-card" tabindex="0" role="button" aria-label="Kingdom of God category">
+      <div class="card-icon">⛪</div>
+      <h3>Kingdom of God</h3>
+      <p>Spiritual growth and purpose</p>
+    </div>
+  </div>
 </section>
 
-<section class="books" id="bookList">
-  <div class="book"><a href="https://www.pdfdrive.com/rich-dad-poor-dad-e11574.html" target="_blank">Rich Dad Poor Dad</a></div>
-  <div class="book"><a href="https://www.pdfdrive.com/think-and-grow-rich-e11573.html" target="_blank">Think and Grow Rich</a></div>
-  <div class="book"><a href="https://www.bible.com/" target="_blank">The Bible</a></div>
-  <div class="book"><a href="https://www.pdfdrive.com/understanding-your-potential-e25896.html" target="_blank">Understanding Your Potential</a></div>
+<!-- Books Section -->
+<section class="books-section" id="books">
+  <h2 class="section-title">Featured Books</h2>
+  <div class="books-container" id="bookList">
+    <div class="book-card">
+      <div class="book-icon">💼</div>
+      <h3 class="book-title">Rich Dad Poor Dad</h3>
+      <p class="book-category">Personal Finance</p>
+      <p class="book-description">Learn the secrets to building wealth and financial independence</p>
+      <a href="https://www.pdfdrive.com/rich-dad-poor-dad-e11574.html" target="_blank" rel="noopener noreferrer" class="book-link">📖 Read Now →</a>
+    </div>
+    
+    <div class="book-card">
+      <div class="book-icon">🎯</div>
+      <h3 class="book-title">Think and Grow Rich</h3>
+      <p class="book-category">Mindset Growth</p>
+      <p class="book-description">Unlock your potential and achieve your dreams through positive thinking</p>
+      <a href="https://www.pdfdrive.com/think-and-grow-rich-e11573.html" target="_blank" rel="noopener noreferrer" class="book-link">📖 Read Now →</a>
+    </div>
+    
+    <div class="book-card">
+      <div class="book-icon">✨</div>
+      <h3 class="book-title">The Bible</h3>
+      <p class="book-category">Kingdom of God</p>
+      <p class="book-description">Sacred wisdom and spiritual guidance for life</p>
+      <a href="https://www.bible.com/" target="_blank" rel="noopener noreferrer" class="book-link">📖 Read Now →</a>
+    </div>
+    
+    <div class="book-card">
+      <div class="book-icon">💎</div>
+      <h3 class="book-title">Understanding Your Potential</h3>
+      <p class="book-category">Mindset Growth</p>
+      <p class="book-description">Discover your purpose and maximize your life potential</p>
+      <a href="https://www.pdfdrive.com/understanding-your-potential-e25896.html" target="_blank" rel="noopener noreferrer" class="book-link">📖 Read Now →</a>
+    </div>
+  </div>
+  
+  <!-- No Results Message -->
+  <div class="no-results" id="noResults" style="display: none;">
+    <p>📚 No books found. Try a different search term.</p>
+  </div>
 </section>
 
-<footer>
-  © 2026 MBUNGE ONLINE LIBRARY | Empowering Lives
+<!-- About Section -->
+<section class="about" id="about">
+  <h2 class="section-title">About MBUNGE Library</h2>
+  <div class="about-content">
+    <p>Welcome to MBUNGE Library, your gateway to precious knowledge that profoundly impacts your growth and successful life. We curate the best books across Personal Finance, Mindset Development, and Spiritual Growth.</p>
+    <p>Our mission is to empower you with knowledge that transforms your life and helps you achieve your dreams.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2026 MBUNGE ONLINE LIBRARY | Empowering Lives Through Knowledge</p>
+    <p class="footer-social">Built with 💚 for your success</p>
+  </div>
 </footer>
 
 <script src="script.js"></script>
