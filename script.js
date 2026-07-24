@@ -1,4 +1,44 @@
 // ============================================
+// BOOK COVER IMAGE LOADER
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+  const bookCards = document.querySelectorAll('.book-card');
+  
+  // Map of book titles to cover image URLs
+  const bookCovers = {
+    'Rich Dad Poor Dad': 'https://images-na.ssl-images-amazon.com/images/P/B00YJKNQXY.01.L.jpg',
+    'Think and Grow Rich': 'https://images-na.ssl-images-amazon.com/images/P/1585424335.01.L.jpg',
+    'The Bible': 'https://images-na.ssl-images-amazon.com/images/P/B007ZPUBEM.01.L.jpg',
+    'Understanding Your Potential': 'https://images-na.ssl-images-amazon.com/images/P/0768403502.01.L.jpg',
+    'Rediscovering the Kingdom': 'https://images-na.ssl-images-amazon.com/images/P/1938539109.01.L.jpg',
+    'The Psychology of Money': 'https://images-na.ssl-images-amazon.com/images/P/0857197290.01.L.jpg',
+    'Start with Why': 'https://images-na.ssl-images-amazon.com/images/P/1591846447.01.L.jpg',
+    'Atomic Habits': 'https://images-na.ssl-images-amazon.com/images/P/0735211299.01.L.jpg'
+  };
+  
+  bookCards.forEach(card => {
+    const titleElement = card.querySelector('.book-title');
+    const coverBg = card.querySelector('.book-cover-bg');
+    
+    if (titleElement && coverBg) {
+      const bookTitle = titleElement.textContent.trim();
+      const coverUrl = bookCovers[bookTitle];
+      
+      if (coverUrl) {
+        // Set background image with fallback color
+        coverBg.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('${coverUrl}')`;
+        coverBg.style.backgroundSize = 'cover';
+        coverBg.style.backgroundPosition = 'center';
+      } else {
+        // Fallback to gradient if no cover found
+        coverBg.style.background = `linear-gradient(135deg, var(--secondary-color), rgba(26, 95, 71, 0.5))`;
+      }
+    }
+  });
+});
+
+// ============================================
 // SEARCH FUNCTIONALITY
 // ============================================
 
@@ -31,7 +71,7 @@ function filterBooks() {
       bookDescription.includes(input) ||
       input === ""
     ) {
-      books[i].style.display = "block";
+      books[i].style.display = "flex";
       books[i].style.animation = "slideUp 0.3s ease";
       visibleCount++;
     } else {
