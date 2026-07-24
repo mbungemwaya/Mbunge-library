@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="chatbot.css">
   <link rel="icon" href= "Eagle Vision.png">
+  <!-- PDF.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body>
 
@@ -75,7 +77,7 @@
 <section class="books-section" id="books">
   <h2 class="section-title">Featured Books</h2>
   <div class="books-container" id="bookList">
-    <div class="book-card" data-cover-url="https://via.placeholder.com/300x450?text=Rich+Dad+Poor+Dad">
+    <div class="book-card">
       <div class="book-cover-bg"></div>
       <div class="book-content">
         <h3 class="book-title">Rich Dad Poor Dad</h3>
@@ -85,7 +87,7 @@
       </div>
     </div>
     
-    <div class="book-card" data-cover-url="https://via.placeholder.com/300x450?text=Think+and+Grow+Rich">
+    <div class="book-card">
       <div class="book-cover-bg"></div>
       <div class="book-content">
         <h3 class="book-title">Think and Grow Rich</h3>
@@ -95,17 +97,17 @@
       </div>
     </div>
     
-    <div class="book-card" data-cover-url="https://via.placeholder.com/300x450?text=The+Bible">
+    <div class="book-card">
       <div class="book-cover-bg"></div>
       <div class="book-content">
         <h3 class="book-title">The Bible</h3>
         <p class="book-category">Kingdom of God</p>
         <p class="book-description">Sacred wisdom and spiritual guidance for life</p>
-        <a href="https://www.bible.com" target="_blank"class="book-link" >📖 Read Now →</a>
+        <a href="https://www.bible.com" target="_blank" class="book-link">📖 Read Now →</a>
       </div>
     </div>
     
-    <div class="book-card" data-cover-url="https://via.placeholder.com/300x450?text=Understanding+Your+Potential">
+    <div class="book-card">
       <div class="book-cover-bg"></div>
       <div class="book-content">
         <h3 class="book-title">Understanding Your Potential</h3>
@@ -115,7 +117,7 @@
       </div>
     </div>
 
-    <div class="book-card" data-cover-url="https://via.placeholder.com/300x450?text=Rediscovering+the+Kingdom">
+    <div class="book-card">
       <div class="book-cover-bg"></div>
       <div class="book-content">
         <h3 class="book-title">Rediscovering the Kingdom</h3>
@@ -125,7 +127,7 @@
       </div>
     </div>
 
-    <div class="book-card" data-cover-url="https://via.placeholder.com/300x450?text=Psychology+of+Money">
+    <div class="book-card">
       <div class="book-cover-bg"></div>
       <div class="book-content">
         <h3 class="book-title">The Psychology of Money</h3>
@@ -135,7 +137,7 @@
       </div>
     </div>
 
-    <div class="book-card" data-cover-url="https://via.placeholder.com/300x450?text=Start+with+Why">
+    <div class="book-card">
       <div class="book-cover-bg"></div>
       <div class="book-content">
         <h3 class="book-title">Start with Why</h3>
@@ -145,7 +147,7 @@
       </div>
     </div>
 
-    <div class="book-card" data-cover-url="https://via.placeholder.com/300x450?text=Atomic+Habits">
+    <div class="book-card">
       <div class="book-cover-bg"></div>
       <div class="book-content">
         <h3 class="book-title">Atomic Habits</h3>
@@ -170,6 +172,7 @@
     <p>Our mission is to empower you with knowledge that transforms your life and helps you achieve your dreams.</p>
   </div>
 </section>
+
 <!-- ============================================
      CHATBOT WIDGET
      ============================================ -->
@@ -217,16 +220,16 @@
     </div>
   </div>
 </div>
+
 <!-- Footer -->
 <footer class="footer">
   <div class="footer-content">
     <p>&copy; 2026 MBUNGE ONLINE LIBRARY | Empowering Lives Through Knowledge</p>
     <p class="footer-social">Built By MBUNGE with 💚 for your success</p>
   </div>
-  
 </footer>
 
 <script src="script.js"></script>
-  <script src="chatbot.js"></script>
+<script src="chatbot.js"></script>
 </body>
 </html>
