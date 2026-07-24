@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     'Think and Grow Rich': 'THINK_AND_GROW_RICH_-_Napoleon_Hill.pdf',
     'Understanding Your Potential': 'understanding_your_potential_-_myles_munroe.pdf',
     'Rediscovering the Kingdom': 'Rediscovering%20the%20Kingdom%20-%20Myles%20Munroe.pdf',
+    'The Psychology of Money': 'The-Psychology-of-Money-Morgan-Housel.pdf',
     'Start with Why': 'Start%20With%20Why%20-%20Simon%20Sinek.pdf',
     'Atomic Habits': 'Atomic%20habits%20(%20PDFDrive%20).pdf'
   };
