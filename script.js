@@ -21,6 +21,11 @@ document.addEventListener('DOMContentLoaded', async function() {
     'Start with Why': 'Start%20With%20Why%20-%20Simon%20Sinek.pdf',
     'Atomic Habits': 'Atomic%20habits%20(%20PDFDrive%20).pdf'
   };
+
+  // Map of book titles to image URLs (for books without PDF or special cases)
+  const bookImages = {
+    'The Bible': 'https://images.bible.com/bible-app-screenshots/bible-app-en-US-hero.png'
+  };
   
   for (const card of bookCards) {
     const titleElement = card.querySelector('.book-title');
@@ -29,8 +34,12 @@ document.addEventListener('DOMContentLoaded', async function() {
     if (titleElement && coverBg) {
       const bookTitle = titleElement.textContent.trim();
       const pdfFile = bookPDFs[bookTitle];
+      const imageUrl = bookImages[bookTitle];
       
-      if (pdfFile && pdfjsLib) {
+      if (imageUrl) {
+        // Use image URL if available
+        setImageCover(imageUrl, coverBg, bookTitle);
+      } else if (pdfFile && pdfjsLib) {
         try {
           // Extract first page from PDF
           await extractPDFCover(pdfFile, coverBg, bookTitle);
@@ -45,6 +54,17 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
   }
 });
+
+function setImageCover(imageUrl, coverBg, bookTitle) {
+  try {
+    coverBg.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('${imageUrl}')`;
+    coverBg.style.backgroundSize = 'cover';
+    coverBg.style.backgroundPosition = 'center';
+  } catch (error) {
+    console.error(`Error loading image cover for ${bookTitle}:`, error);
+    setFallbackCover(coverBg);
+  }
+}
 
 async function extractPDFCover(pdfPath, coverBg, bookTitle) {
   try {
